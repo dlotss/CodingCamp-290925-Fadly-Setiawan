@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Todo List</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <button class="theme-switcher" id="theme-switcher">🌙</button>
+        <h1>Todo List</h1>
+        
+        <form id="todo-form">
+            <input type="text" id="task-input" placeholder="Add a todo ..." required>
+            <input type="date" id="date-input" required>
+            <button type="submit" id="add-task-btn">+</button>
+        </form>
+
+        <div class="controls">
+            <div class="filter-controls">
+                <button class="control-btn active" data-filter="all">All</button>
+                <button class="control-btn" data-filter="pending">Pending</button>
+                <button class="control-btn" data-filter="completed">Completed</button>
+            </div>
+            <button class="control-btn" id="delete-all-btn">DELETE ALL</button>
+        </div>
+
+        <div class="task-header">
+            <span>TASK</span>
+            <span>DUE DATE</span>
+            <span>STATUS</span>
+            <span>ACTIONS</span>
+        </div>
+        <ul id="task-list">
+            <!-- Tasks will be dynamically inserted here -->
+        </ul>
+        <p id="no-tasks-msg" style="display: none;">No task found</p>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
